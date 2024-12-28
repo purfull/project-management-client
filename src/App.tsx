@@ -1,11 +1,10 @@
-import React from 'react';
-// import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Navigates from "./Navigate/Navigate.tsx";
 
 function App() {
   return (
     <div className="App">
-      dsfajvkfaljk
+      <Navigates />
     </div>
   );
 }
