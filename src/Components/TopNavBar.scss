@@ -3,7 +3,9 @@
     align-items: center;
     justify-content: space-between;
     height: 50px;
-    padding: 10px;
+    // padding: 10px;
+    padding: 6px;
+    width: 100%;
 
     .search-bar-container {
         display: flex;
@@ -42,5 +44,97 @@
                 width: 200px !important;
             }
         }
+    }
+}
+
+.ant-dropdown {
+    .ant-dropdown-menu-title-content {
+        .notification-item {
+            display: flex;
+
+        }
+
+        .notification-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: "center";
+
+            .notification-title {
+                font-weight: 500;
+                font-size: 15px;
+                color: #3b4056;
+            }
+
+            .message {
+                color: #666cff;
+                background-color: #e7e7ff;
+                padding: 3px;
+                border-radius: 12px;
+                width: 50px;
+                text-align: center;
+                font-weight: 400;
+            }
+        }
+
+        .notification-content {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            max-height: 300px;
+            overflow-y: auto;
+            margin-left: 12px;
+
+            .new-message {
+                font-size: 15px;
+                font-weight: 500;
+                color: #3b4056;
+            }
+
+            .message-received {
+                font-size: 15px;
+                color: #3b4056;
+
+            }
+
+            .message-time {
+                font-size: 15px;
+                color: #3b4056;
+            }
+        }
+
+        .profile-container {
+            display: flex;
+            align-items: center;
+            width: 140px;
+        }
+
+        .profile-details {
+            margin-left: 10px;
+
+            .role-name {
+                --bs-text-opacity: 1;
+                color: #a8aab4 !important;
+            }
+        }
+
+        .user-setting-container {
+            .user-setting {
+                margin-left: 10px
+            }
+        }
+
+        .logout-button {
+            background-color: red;
+            /* width: 90%; */
+            width: 167px;
+            margin: 10px;
+            text-align: center;
+            color: white !important;
+            border-radius: 7px;
+            .ant-btn{
+                color: white !important;
+            }
+        }
+        
     }
 }
