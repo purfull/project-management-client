@@ -1,13 +1,20 @@
 import React from "react"
 import SideNavBar from "./SideNavBar.tsx"
 import TopNavBar from "./TopNavBar.tsx"
+import PrjtMngmntTable from "./EmployeeTable.tsx"
 
 const DashboardScreen = () => {
-    return(
-        <div style={{display: "flex",width: "100%"}}>
-            <SideNavBar/>
-            <TopNavBar/>
+    return (
+        <div style={{ display: "flex", width: "100%" }}>
+            <SideNavBar />
+            <div style={{ width: "94%" }}>
+                <TopNavBar />
+                <PrjtMngmntTable />
+            </div>
+
         </div>
+
+
     )
 }
 

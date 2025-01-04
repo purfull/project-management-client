@@ -4,14 +4,16 @@ import { useState } from "react";
 import { ContainerOutlined, DesktopOutlined, MailOutlined, PieChartOutlined } from "@ant-design/icons";
 import "./SideNavBar.scss";
 import BrandLogo from "../Images/Logo.tsx";
+import { Link } from "react-router-dom";
 
 const SideNavBar = () => {
     const [collapsed, setCollapsed] = useState(true);
     const items: any = [
-        { key: '0', icon: <span style={{color: "#666cff"}}><BrandLogo /></span>, label: <div>Materialize</div> },
-        { key: '1', icon: <PieChartOutlined />, label: 'Option 1' },
-        { key: '2', icon: <DesktopOutlined />, label: 'Option 2' },
-        { key: '3', icon: <ContainerOutlined />, label: 'Option 3' }
+        { key: '0', icon: <span style={{color: "#666cff"}}><BrandLogo /></span>, label: <div >Materialize</div > },
+        { key: '1', icon: <PieChartOutlined />, label: <Link to="/dashboard">DashBoard</Link > },
+        { key: '2', icon: <DesktopOutlined />, label: <Link to="/chatbot">Chat</Link > },
+        { key: '3', icon: <ContainerOutlined />, label: <div >Calendar</div >  },
+        { key: '4', icon: <ContainerOutlined />, label: <div >Kanban</div >  }
     ];
 
     return (
