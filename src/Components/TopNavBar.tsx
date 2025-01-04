@@ -112,7 +112,7 @@ const TopNavBar = () => {
                                 <BellOutlined className="bell-icon" style={{ fontSize: "20px" }} />
                             </Badge>
                         </Dropdown>
-                        <Dropdown menu={{ items }} trigger={['hover']} placement="bottomRight" className="avatar-dropdown">
+                        <Dropdown menu={{ items }} trigger={['click']} placement="bottomRight" className="avatar-dropdown">
                             <Badge dot color="green" className="avatar-badge">
                                 <Avatar shape="circle" icon={<UserOutlined />} />
                             </Badge>

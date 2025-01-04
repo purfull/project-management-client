@@ -9,9 +9,10 @@
         background-image: url('../Images/LoginImage.png');
         background-size: contain;
         background-position: center;
-        background-color: #676b7b;
+        background-color: #F7F7F9;
         background-repeat: no-repeat;
         height: 100vh;
+        
     }
 
     .login-form-container {
@@ -20,9 +21,11 @@
         flex-direction: column;
         justify-content: center;
         padding: 20px;
-
+        width: 80%;
+        margin: auto;
         .welcome-message {
             font-size: 1.5rem;
+            font-weight: 600;
             color: #3b4056;
             margin-bottom: 10px;
         }
@@ -34,18 +37,40 @@
 
         .inputBox {
             height: 45px;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
         }
 
         .sign-in-button {
             color: #fff !important;
-            background-color: #666cff !important;
-            border-color: #666cff !important;
+            background-color: #6200ed !important;
+            border-color: #6200ed !important;
             transition: opacity 0.5s ease !important; 
+            padding: 20px 20px !important;
+            font-weight: 600;
             width: 100%;
         }
         .sign-in-button.clicked{
             opacity: 0.3 !important;
         }
+
+        // added options-row forgot-password 
+        .options-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #3b4056;
+            margin-bottom: 20px;
+            font-weight: 500;
+          }
+          
+          .forgot-password {
+            color: #6200ed; 
+            text-decoration: none;
+          }
+          
+          .forgot-password:hover {
+            color: #823ce4; 
+          }
+          
     }
 }

@@ -4,7 +4,7 @@ import TopNavBar from "./TopNavBar.tsx"
 
 const DashboardScreen = () => {
     return(
-        <div style={{display: "flex",width: "100%"}}>
+        <div style={{display: "flex",width: "100%",height: '100vh', backgroundColor: '#F7F7F9'}}>
             <SideNavBar/>
             <TopNavBar/>
         </div>

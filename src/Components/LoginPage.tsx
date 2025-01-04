@@ -1,7 +1,7 @@
 import React from "react";
 import AppImages from "../Globals/AppImages.ts";
 import "./LoginPage.scss";
-import { Button, Form, Input } from "antd";
+import { Button, Checkbox, Form, Input } from "antd";
 import { EyeInvisibleOutlined, EyeTwoTone } from "@ant-design/icons";
 
 const LoginPage = () => {
@@ -10,7 +10,7 @@ const LoginPage = () => {
     <div className="login-component">
       <div className="login-image" />
       <div className="login-form-container">
-        <div className="welcome-message">Welcome to Materialize! 👋</div>
+        <div className="welcome-message">Welcome to Purfull! 👋</div>
         <div className="signin-message">
           Please sign-in to your account and start the adventure
         </div>
@@ -25,6 +25,13 @@ const LoginPage = () => {
             }
           />
           {/* </div> */}
+
+          <div className="options-row">
+            <Checkbox>Remember Me</Checkbox>
+            <a href="#" className="forgot-password">
+              Forgot Password?
+            </a>
+          </div>
           <Button className="sign-in-button">Sign In</Button>
         </Form>
       </div>
