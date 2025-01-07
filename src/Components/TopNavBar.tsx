@@ -15,7 +15,7 @@ const TopNavBar = () => {
     const items: MenuProps['items'] = [
         {
             label: (
-                <div style={{ display: "flex", alignItems: "center" }}>
+                <div style={{ display: "flex", alignItems: "center" }} className="profile-container">
                     <div className="avatar-profile">
                         <Avatar shape="circle" icon={<UserOutlined />} />
                     </div>
@@ -35,14 +35,21 @@ const TopNavBar = () => {
         },
         {
             label: (
-                <div>
-                    <div>
-                        <UserOutlined />
-                        <span>Settings</span>
-                    </div>
+                <div className="user-setting-container">
+                    <UserOutlined style={{fontSize: '20px'}}/>
+                    <span className="user-setting">My Profile</span>
                 </div>
             ),
             key: '1',
+        },
+        {
+            label: (
+                <div className="user-setting-container">
+                    <UserOutlined style={{fontSize: '20px'}}/>
+                    <span className="user-setting">Setting</span>
+                </div>
+            ),
+            key: '2',
         },
         {
             label: (
@@ -50,18 +57,18 @@ const TopNavBar = () => {
                     <Button type="link">Logout</Button>
                 </div>
             ),
-            key: '2',
+            key: '3',
         }
     ];
 
     const itemsToRender: MenuProps['items'] = [
         {
             label: (
-                <div style={{ display: "flex", alignItems: "center" }}>
-                    <div>
+                <div className="notification-header">
+                    <div className="notification-title">
                         Notification
                     </div>
-                    <div>8 New</div>
+                    <div className="message">8 New</div>
                 </div>
             ),
             key: '0',
@@ -71,16 +78,16 @@ const TopNavBar = () => {
         },
         {
             label: (
-                <div style={{ display: "flex" }}>
+                <div className="notification-item">
                     <Avatar shape="circle" icon={<UserOutlined />} />
-                    <div>
-                        <div>
+                    <div className="notification-content">
+                        <div className="new-message">
                             New Message
                         </div>
-                        <div>
+                        <div className="message-received">
                             You have 4 new messages from Natalie
                         </div>
-                        <div>
+                        <div className="message-time">
                             1 hour ago
                         </div>
                     </div>
@@ -93,7 +100,6 @@ const TopNavBar = () => {
 
     return (
         <>
-            {/* <SideNavBar /> */}
             <div className="top-nav-container">
                 {/* <span className="brand-logo">
                 <BrandLogo />
@@ -107,16 +113,20 @@ const TopNavBar = () => {
 
             </div> */}
                     <div className="avatar-container">
-                        <Dropdown menu={{ items: itemsToRender }} trigger={['hover']} placement="bottomRight" className="avatar-dropdown">
-                            <Badge dot color="red">
-                                <BellOutlined className="bell-icon" style={{ fontSize: "20px" }} />
-                            </Badge>
-                        </Dropdown>
-                        <Dropdown menu={{ items }} trigger={['click']} placement="bottomRight" className="avatar-dropdown">
-                            <Badge dot color="green" className="avatar-badge">
-                                <Avatar shape="circle" icon={<UserOutlined />} />
-                            </Badge>
-                        </Dropdown>
+                        <div className="notification-container">
+                            <Dropdown className="notification-dropdown" menu={{ items: itemsToRender }} trigger={['hover']} placement="bottomRight" >
+                                <Badge dot color="red">
+                                    <BellOutlined className="bell-icon" style={{ fontSize: "20px" }} />
+                                </Badge>
+                            </Dropdown>
+                        </div>
+                        <div>
+                            <Dropdown className="avatar-dropdown" menu={{ items }} trigger={['hover']} placement="bottomRight" >
+                                <Badge dot color="green" className="avatar-badge">
+                                    <Avatar shape="circle" icon={<UserOutlined />} />
+                                </Badge>
+                            </Dropdown>
+                        </div>
                     </div>
                 </>
                 }
