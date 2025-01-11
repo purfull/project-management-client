@@ -1,8 +1,11 @@
-.chat-bot-container{
-    width: 22%;
+.chat-bot-container {
+    width: 100%;
+    display: flex;
+    // margin: 40px;
+
     .message-and-contacts {
-        width: 100%;
-    
+        width: 22%;
+
         .avatar-and-contacts {
             display: flex;
             justify-content: space-around;
@@ -11,27 +14,27 @@
             padding: 10px 0px 10px 0px;
             align-items: center;
             border-start-start-radius: 10px;
-    
+
             .contact-search-box {
                 width: 70%;
                 height: 35px;
                 border-radius: 18px;
-    
+
             }
-    
+
         }
-    
+
         .message-container {
             padding: 10px;
             border: 1px solid #e5e6e8;
             border-end-start-radius: 10px;
-    
+
             .chat-list-header {
                 color: #666cff;
                 font-size: 15px;
                 font-weight: 500;
             }
-    
+
             .message-box-selected {
                 display: flex;
                 margin-top: 17px;
@@ -41,23 +44,23 @@
                 // width: 100%;
                 height: 56px;
                 border-radius: 11px;
-    
+
                 .sender-name {
                     font-size: 15px;
-    
+
                     .message-min {
                         font-size: 15px;
                         margin-left: 8px;
-    
+
                     }
                 }
-    
+
                 .name-message-content {
                     margin-left: 10px;
                     color: white;
                 }
             }
-    
+
             .message-box {
                 display: flex;
                 margin-top: 17px;
@@ -67,24 +70,24 @@
                 width: 100%;
                 height: 56px;
                 border-radius: 11px;
-    
+
                 .sender-name {
                     font-size: 15px;
-    
+
                     .message-min {
                         font-size: 15px;
                         margin-left: 8px;
                         color: #a8aab4;
-    
+
                     }
                 }
-    
+
                 .name-message-content {
                     margin-left: 10px;
                     color: black;
                 }
             }
-    
+
             .contact-box {
                 display: flex;
                 margin-top: 17px;
@@ -93,20 +96,99 @@
                 width: 100%;
                 height: 56px;
                 border-radius: 11px;
-    
+
                 .name-role-content {
                     font-size: 15px;
                     margin-left: 10px;
                 }
-    
+
                 .contact-role {
                     font-size: 15px;
                     color: #a8aab4;
                 }
             }
-    
-    
+
+
         }
-    
+
+    }
+
+    .message_container {
+        // display: flex;
+        width: 78%;
+        background-color: #f7f6fa;
+        position: relative;
+
+        .user_actions_container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            // padding: 10px 0px 10px 10px;
+            padding: 6px 0px 10px 10px;
+            border: 1px solid #e5e6e8;
+
+            .user_profile_container {
+                display: flex;
+                // width: 16%;
+                justify-content: space-between;
+                align-items: center;
+
+                .user_name_role {
+                    margin-left: 10px;
+
+                    .message-_sender {
+                        font-size: 15px;
+                        font-weight: 500;
+                    }
+
+                    .user_role {
+                        color: #676b7b;
+                        font-size: 15px;
+                        font-weight: 500;
+                    }
+                }
+            }
+
+            .user_action_icons {
+                width: 10%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
+
+        .message_display_container {
+            display: flex;
+            align-items: center;
+            // width: 100%;
+            padding: 10px;
+
+            .message_content {
+                margin: 0px 0px 0px 20px;
+                background: white;
+                padding: 10px;
+                box-shadow: 0 .125rem .375rem 0 rgba(38, 43, 67, .14);
+                border-radius: 5px;
+                border-top-left-radius: 0px;
+            }
+
+            .message_sender {
+                background: #666cff !important;
+                color: white !important;
+            }
+        }
+
+        .message_sender {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end !important;
+        }
+
+        .input_container {
+            padding: 15px;
+            position: absolute;
+            bottom: 0;
+            width: 97%;
+        }
     }
 }
